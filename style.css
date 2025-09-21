@@ -1,3 +1,32 @@
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: #0a0066;
+    padding: 12px 0;
+    z-index: 100;
+}
+.credits a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.95);
+    font-size: 1em;
+}
+
+
+#subform {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.col-12 {
+    margin-bottom: 18px;
+}
+
 .timeline-container {
     padding: 20px 40px;
 }
@@ -134,6 +163,23 @@ p {
 .footer2 {
     visibility: hidden;
 }
+#column-content h2, #column-content p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+}
+.btn {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+}
+.icon {
+        height: 30px;
+}
+
+
 
 @media(max-width: 1400px) {
     .footer2 {
@@ -153,12 +199,21 @@ p {
     .hero {
         margin-bottom: 10px;
     }
+    #column-content {
+        margin-top: 40px;
+    }
+    #column-content p {
+        font-size: 1.5em;
+}
 }
 
 
 @media(max-width: 800px) {
     .card {
-        flex: 0 0 85%;
+        width: 75vw;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
     #logo {
         height: 50px;
@@ -169,11 +224,12 @@ p {
     h2, h3, p {
         font-size: 1em;
     }
+   
     .card-text p {
         font-size: 1em;
     }
     .card-text {
-        padding: 10px
+        padding: 10px;
     }
     .hero {
         margin-bottom: 10px;
@@ -183,16 +239,12 @@ p {
         margin: 10px;
         padding: 5px;
     }
-    .carousel::scroll-button(right), .carousel::scroll-button(left) {
-        font-size: 2rem;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        padding-bottom: .1em;
-        translate: -100%;
-}
-    .carousel::scroll-button(left) {
-        translate: 25%;
+   .carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+    opacity: 0;
+    cursor: auto;
+    }
+    .carousel {
+        display: block;
     }
     .footer2 {
         margin: 15px 0px 5px;
@@ -201,5 +253,19 @@ p {
     .footer {
         display: none;
         visibility: hidden;
+    }
+
+}
+@media(max-width: 900px){
+     #column-content {
+        margin-top: 40px;
+    }
+     #column-content h2 {
+        font-size: 1.5em;
+    }
+    .credits, #column-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 0;
     }
 }
